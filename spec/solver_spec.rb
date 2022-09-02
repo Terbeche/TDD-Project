@@ -25,4 +25,19 @@ describe Solver do
       expect(@solver.reverse('call911')).to eq '119llac'
     end
   end
+
+  describe '#fizzbuzz' do
+    it 'it reuturns fizz when N is divisible by 3' do
+      expect(@solver.fizzbuzz(21)).to eq 'fizz'
+    end
+    it 'it reuturns bizz when N is divisible by 5' do
+      expect(@solver.fizzbuzz(55)).to eq 'buzz'
+    end
+    it 'it reuturns fizzuzz When N is divisible by 3 and 5' do
+      expect(@solver.fizzbuzz(30)).to eq 'fizzbuzz'
+    end
+    it 'it returns the same number when is not divisible by 3 or 5' do
+      expect(@solver.fizzbuzz(7)).to eq '7'
+    end
+  end
 end
