@@ -12,4 +12,13 @@ class Solver
       res
     end
   end
+
+  def reverse(word)
+    res = ''
+    (word.length - 1).downto(0).each do |i|
+      res += word[i]
+    end
+    puts res
+    res
+  end
 end
